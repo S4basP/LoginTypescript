@@ -52,6 +52,7 @@ form label input::placeholder {
 }
 
 form button {
+  margin-top: 10px;
   color: #fff;
   border: none;
   background: #000;
@@ -59,4 +60,8 @@ form button {
   cursor: pointer;
   font-size: 20px;
   font-family: "Noto Serif", serif;
+}
+
+form button .singIn {
+  background-color: #fff;
 }

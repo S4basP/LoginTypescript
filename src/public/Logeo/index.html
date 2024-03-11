@@ -15,17 +15,18 @@
   </head>
   <body>
     
-      <form action="" method="post">
+      <form action="http://localhost:3000/createUser" method="post">
         <h1 class = "title">Login</h1>
         <label for="">
           <i class="fa-solid fa-user"></i>
-          <input type="text" name="" id="" placeholder="Email" required>
+          <input type="text" name="" id="email" placeholder="Email" required>
         </label>
         <label>
           <i class="fa-solid fa-key"></i>
-          <input type="password" placeholder="password" required>
+          <input type="password" id = "password" placeholder="Password" required>
         </label>
         <button type="submit">Login</button>
+        <button id = "singIn" class = "singIn">Sing In</button>
       </form>
     
   </body>

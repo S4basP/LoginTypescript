@@ -15,19 +15,20 @@
   </head>
   <body>
     
-      <form action="" method="post">
+      <form id = "form-singIn" name = "form-singIn" >
         <h1 class = "title">Sing in</h1>
         <label for="">
-          <input type="text" name="" id="name" placeholder="Name" required>
+          <input type="text" name="name" id="name" placeholder="Name" required>
         </label>
         <label>
-          <input type="email" placeholder="Email" id="email" required>
+          <input type="email" name = "email" placeholder="Email" id="email" required>
         </label>
         <label for="password">
             <input type="password" name="password" id="pass" placeholder="Password">
         </label>
-        <button type="submit">Sing in</button>
+        <button type="button" id = "submitDataForm">Sing in</button>
       </form>
-    
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src = "./src/singIn.js" type = "module"></script>
   </body>
 </html>
