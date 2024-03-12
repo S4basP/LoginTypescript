@@ -6,7 +6,7 @@ export const createUser: RequestHandler = async (req, res) => {
   const salt = await bcrypt.genSalt(5);
   const hashPass = await bcrypt.hash(req.body.pass, salt);
 
-  console.log(hashPass.length);
+
   let { name, email, pass } = req.body;
 
   pass = hashPass;
@@ -24,26 +24,18 @@ export const createUser: RequestHandler = async (req, res) => {
 };
 
 export const consultedUserCopi: RequestHandler = async (req, res) => {
-
   try {
-    const [rows] : any = await pool.query(
-      "SELECT email from user where email = ?;",
-      [req.body.email]
-    );
-    
-    if( rows[0].email === req.body.email ){
-      res.status(200).json( {
-        data: true
-      });
+    const [rows] : any = await pool.query("SELECT email from user where email = ?;", [
+      req.body.email,
+    ]);
+    if( rows <= 0){
+      return res.json({userFound: false });
     }
-    
-      res.status(200).json( {
-        data: false
-    
-    });
-  
-
+    if( rows[0].email === req.body.email)
+    {
+      return res.json({ userFound: true });
+    }
   } catch (error) {
-    res.status(500).json({ message: `Error connection database: ${error}` });
+    return res.status(500).json({ message: `Error connection database: ${error}` });
   }
 };

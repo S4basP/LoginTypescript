@@ -1,26 +1,12 @@
-import {name, email, password} from './subtracData.js'
+import { validationUser } from './serverResp.js';
+import { cleanDataForm, getDataInputs } from './subtracData.js'
 
 const submitDataForm = document.getElementById('submitDataForm');
-
+let user;
 submitDataForm.addEventListener("click", async (e) => {
-    e.preventDefault();
- 
-    try{
-
-    const res = await axios({
-        method: 'post',
-        url: 'http://localhost:3000/createUser',
-        data: {
-            name: name,
-            email: email,
-            pass: password
-        }
-    });
-    console.log(res);
-    }catch (error)
-    {
-        console.log("Error send data: ", error);
-    }
-
+ user = getDataInputs();
+ console.log(validationUser(user));
+ cleanDataForm();
+  
 
 });
