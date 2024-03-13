@@ -24,6 +24,7 @@ export const createUser: RequestHandler = async (req, res) => {
 };
 
 export const consultedUserCopi: RequestHandler = async (req, res) => {
+  console.log(req.body.email);
   try {
     const [rows] : any = await pool.query("SELECT email from user where email = ?;", [
       req.body.email,

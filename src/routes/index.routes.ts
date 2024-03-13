@@ -13,7 +13,7 @@ routers.get('/singUp', indexPage);
 
 routers.post('/createUser', createUser);
 
-routers.get('/consultedUserCopi', consultedUserCopi);
+routers.post('/consultedUserCopi', consultedUserCopi);
 
 
 
