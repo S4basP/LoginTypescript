@@ -1,19 +1,28 @@
-let name = document.getElementById('name');
-let email = document.getElementById('email');
-let password = document.getElementById('pass'); 
 
 
 export const getDataInputs = () => {
     return {
-        name: name.value,
-        email: email.value,
-        password: password.value
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        password: document.getElementById('pass').value
+    }
+}
+export const getInpLogin = () => {
+    return {
+        email: document.getElementById('email').value,
+        password: document.getElementById('pass').value
     }
 }
 
 export const cleanDataForm = () => {
-    name.value = "";
-    email.value = "";
-    password.value = "";
+    document.getElementById('name').value = "";
+    document.getElementById('email').value = "";
+    document.getElementById('pass').value = "";
+}
+
+
+export const cleanDataFormLogin = () =>{
+    document.getElementById('email').value = "";
+    document.getElementById('pass').value = "";
 }
 

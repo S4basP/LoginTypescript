@@ -36,3 +36,25 @@ export const createUser = async (user) => {
       }
 
 };
+
+export const validationLogin = async ( user ) => {
+  try {
+
+    const { data } = await axios ({
+      method: "post",
+      url: "http://localhost:3000/loginAutecation",
+      data: {
+        email: user.email,
+        pass: user.password
+      }
+    });
+
+    if( data.userValidation === true ) alert('user valid');
+    else alert('Email or password not valid');
+
+    
+    console.log(data);
+  } catch ( error ) {
+    console.log(`Error to connection server ${error}`);
+  }
+};

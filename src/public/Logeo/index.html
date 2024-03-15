@@ -15,7 +15,7 @@
   </head>
   <body>
     
-      <form action="http://localhost:3000/createUser" method="post">
+      <form >
         <h1 class = "title">Login</h1>
         <label for="">
           <i class="fa-solid fa-user"></i>
@@ -23,11 +23,12 @@
         </label>
         <label>
           <i class="fa-solid fa-key"></i>
-          <input type="password" id = "password" placeholder="Password" required>
+          <input type="password" id = "pass" placeholder="Password" required>
         </label>
-        <button type="submit">Login</button>
+        <button id = "btnLogin">Login</button>
         <button id = "singIn" class = "singIn">Sing In</button>
       </form>
-    
+      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+      <script src = "./src/login.js" type = "module"></script>
   </body>
 </html>
