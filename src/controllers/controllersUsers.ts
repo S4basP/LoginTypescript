@@ -46,8 +46,8 @@ export const loginAutentication: RequestHandler = async (req, res) => {
   const salt = await bcrypt.genSalt(5);
   const hashPass = await bcrypt.hash(req.body.pass, salt);
   const pass: string = hashPass; 
+  console.log(req.body);
 
-  
   try {
     const [rows]: any = await pool.query(
       "select email, pass from user where email = ?",

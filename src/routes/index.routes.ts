@@ -1,15 +1,14 @@
 import { Router } from "express";
 import { consultedUserCopi, createUser, loginAutentication } from '../controllers/controllersUsers';
-import { indexPage } from "../controllers/controller.files.public";
+import { indexPage, registrerUser } from "../controllers/controller.files.public";
 
 const routers : Router = Router();
 
 
-routers.get('/', ( req , res ) => {
-    res.send("<h1>Hello World</h1>");
-});
+routers.get('/', indexPage)
 
-routers.get('/singUp', indexPage);
+
+routers.get('/singUpUser', registrerUser);
 
 routers.post('/createUser', createUser);
 

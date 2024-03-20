@@ -30,7 +30,7 @@ export const createUser = async (user) => {
             pass: user.password,
           }
         });
-        console.log(res);
+        
       } catch (error) {
         console.log("Error send data: ", error);
       }
@@ -49,8 +49,8 @@ export const validationLogin = async ( user ) => {
       }
     });
 
-    if( data.userValidation === true ) alert('user valid');
-    else alert('Email or password not valid');
+    if( data.userValidation === true )alert('user valid');
+    else alert('Email or password not valid ');
 
     
     console.log(data);

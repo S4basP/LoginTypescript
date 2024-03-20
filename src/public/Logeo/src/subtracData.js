@@ -1,4 +1,4 @@
-
+export const modal = document.querySelector("#modal");
 
 export const getDataInputs = () => {
     return {

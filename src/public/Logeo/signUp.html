@@ -16,17 +16,21 @@
   <body>
     
       <form id = "form-singIn" name = "form-singIn" >
-        <h1 class = "title">Sing in</h1>
+        <h1 class = "title">Registrer</h1>
         <label for="">
-          <input type="text" name="name" id="name" placeholder="Name" required>
+          <input type="text" name="name" id="name" placeholder="Name" >
         </label>
         <label>
-          <input type="email" name = "email" placeholder="Email" id="email" required>
+          <input type="email" name = "email" placeholder="Email" id="email" >
         </label>
         <label for="password">
             <input type="password" name="password" id="pass" placeholder="Password">
         </label>
-        <button type="button" id = "submitDataForm">Sing in</button>
+        
+        <div class="butons">
+          <button type="button" id = "submitDataForm">Registrer</button>
+          <button id="btnLogin">Login</button>
+        </div>
       </form>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src = "./src/singIn.js" type = "module"></script>
